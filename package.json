@@ -9,10 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@notionhq/client": "^2.2.2",
+    "axios": "^1.2.1",
+    "bootstrap": "^5.2.3",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
+    "font-awesome": "^4.7.0",
     "next": "13.0.6",
+    "notion-client": "^6.15.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-notion": "^0.10.0",
+    "styled-components": "^5.3.6"
   }
 }
