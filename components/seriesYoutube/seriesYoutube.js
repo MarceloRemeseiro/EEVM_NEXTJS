@@ -1,7 +1,5 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 import Image from "next/image";
-import { Datos } from "../API/Datos";
-import { Dominio } from "../API/Datos";
 import Spinner from "../spinner/spinner";
 
 function SeriesYoutube({ data }) {
