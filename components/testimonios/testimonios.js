@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function Testimonios() {
   return (
     <div className="container-xxl py-5">
@@ -34,7 +36,7 @@ function Testimonios() {
                 <h5>Nombre</h5>
                 <span>Profesión</span>
                 <div>
-                  <img src="img/testimonial-1.jpg" alt="" />
+                  <Image src="/img/testimonial-1.jpg" alt="" width={80} height={80}/>
                 </div>
                 <div>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
@@ -48,7 +50,7 @@ function Testimonios() {
                 <h5>Nombre</h5>
                 <span>Profesión</span>
                 <div>
-                  <img src="img/testimonial-2.jpg" alt="" />
+                  <Image src="/img/testimonial-2.jpg" alt="" width={80} height={80}/>
                 </div>
                 <div>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
@@ -62,7 +64,7 @@ function Testimonios() {
                 <h5>Nombre</h5>
                 <span>Profesión</span>
                 <div>
-                  <img src="img/testimonial-1.jpg" alt="" />
+                  <Image src="/img/testimonial-1.jpg" alt="" width={80} height={80}/>
                 </div>
                 <div>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id

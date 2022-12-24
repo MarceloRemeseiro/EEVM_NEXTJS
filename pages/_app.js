@@ -3,6 +3,7 @@ import Top from "../components/top/top";
 import "../styles/bootstrap.min.css";
 import "../styles/animate/animate.min.css";
 import "../styles/style.css";
+import Footer from "../components/footer/footer";
 
 function MyApp({ Component, pageProps }) {
   return (

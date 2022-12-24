@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Image from "next/image";
 
 export function Videos() {
   const [data, setData] = useState(null);
@@ -54,10 +55,10 @@ const ApiYoutube = () => {
           target="_blank "
           rel="noreferrer"
         >
-          <img
+          <Image
             src={data?.items[0].snippet.thumbnails.high.url}
             className="img-thumbnail rounded mb-2"
-            width="1000"
+            width={800} height={800}
             alt=""
           />
         </Link>
@@ -76,10 +77,10 @@ const ApiYoutube = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img
+                <Image
                   src={video.snippet.thumbnails.high.url}
                   className="img-thumbnail rounded"
-                  width="800"
+                  width={800} height={800}
                   alt=""
                 />
               </Link>

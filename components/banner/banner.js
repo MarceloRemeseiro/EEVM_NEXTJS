@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 function Banner() {
@@ -6,10 +7,11 @@ function Banner() {
       <div className="row g-0">
         <div className="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
           <div className="position-relative">
-            <img
+            <Image
               className="img-fluid w-100"
-              src="img/misionyvision.png"
+              src="/img/misionyvision.png"
               alt=""
+              width={800} height={800}
             />
             <div className="facts-overlay">
               <h1 className="display-1 ">01</h1>
@@ -26,7 +28,7 @@ function Banner() {
         </div>
         <div className="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
           <div className="position-relative">
-            <img className="img-fluid w-100" src="img/PASTORES.png" alt="" />
+            <Image className="img-fluid w-100" src="/img/PASTORES.png" alt="" width={800} height={800}/>
             <div className="facts-overlay">
               <h1 className="display-1">02</h1>
               <h4 className="text-white mb-3">Pastores</h4>
@@ -42,10 +44,11 @@ function Banner() {
         </div>
         <div className="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.5s">
           <div className="position-relative">
-            <img
+            <Image
               className="img-fluid w-100"
-              src="img/historiavilassar.png"
+              src="/img/historiavilassar.png"
               alt=""
+              width={800} height={800}
             />
             <div className="facts-overlay">
               <h1 className="display-1">03</h1>
@@ -62,7 +65,7 @@ function Banner() {
         </div>
         <div className="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.7s">
           <div className="position-relative">
-            <img className="img-fluid w-100" src="img/EVANGELIO.png" alt="" />
+            <Image className="img-fluid w-100" src="/img/EVANGELIO.png" alt="" width={800} height={800}/>
             <div className="facts-overlay">
               <h1 className="display-1">04</h1>
               <h4 className="text-white mb-3">El Evangelio</h4>

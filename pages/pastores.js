@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function pastores() {
   return (
     <div>
@@ -16,10 +18,10 @@ function pastores() {
           <div className="row g-5">
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
               <div className="Tarjeta-1 position-relative overflow-hidden ">
-                <img
+                <Image
                   className="position-absolute w-100 h-500"
                   src="img/team-1.jpg"
-                  alt=""
+                  alt="" width={800} height={800}
                 />
               </div>
             </div>
@@ -58,10 +60,10 @@ function pastores() {
           <div className="row g-5">
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
               <div className="Tarjeta-1 position-relative overflow-hidden ">
-                <img
+                <Image
                   className="position-absolute w-100 h-500"
                   src="img/team-2.jpg"
-                  alt=""
+                  alt="" width={800} height={800}
                 />
               </div>
             </div>
@@ -100,10 +102,10 @@ function pastores() {
           <div className="row g-5">
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
               <div className="Tarjeta-1 position-relative overflow-hidden">
-                <img
+                <Image
                   className="position-absolute w-100 h-500"
                   src="img/team-3.jpg"
-                  alt=""
+                  alt="" width={800} height={800}
                 />
               </div>
             </div>

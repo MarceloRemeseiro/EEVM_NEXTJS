@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function TarjetaFotoIzquierda({ data }) {
   return (
     <div className="container-xxl py-5">
@@ -5,10 +7,11 @@ function TarjetaFotoIzquierda({ data }) {
         <div className="row g-5">
           <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
             <div className="Tarjeta-1 position-relative overflow-hidden">
-              <img
+              <Image
                 className="position-absolute w-100 h-100"
                 src={data[0].properties.imagen.files[0].file.url}
                 alt=""
+                width={800} height={800}
               />
             </div>
           </div>

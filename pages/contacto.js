@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Image from "next/image";
 
 const Contacto = () => {
   const form = useRef();
@@ -43,7 +44,7 @@ const Contacto = () => {
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
               <div className="row g-4 align-items-center">
                 <div className="col-sm-6">
-                  <img className="img-fluid" src="img/team-1.jpg" alt="" />
+                  <Image className="img-fluid" src="img/team-1.jpg" alt="" width={800} height={800} />
                 </div>
                 <div className="col-sm-6">
                   <h3 className="mb-0">Isaac Martinez</h3>
@@ -60,7 +61,7 @@ const Contacto = () => {
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
               <div className="row g-4 align-items-center">
                 <div className="col-sm-6">
-                  <img className="img-fluid" src="img/team-2.jpg" alt="" />
+                  <Image className="img-fluid" src="img/team-2.jpg" alt="" width={800} height={800} />
                 </div>
                 <div className="col-sm-6">
                   <h3 className="mb-0">Mat Leigthon</h3>

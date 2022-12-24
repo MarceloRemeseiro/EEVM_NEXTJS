@@ -1,8 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
 import ScrollToTop from "../components/scrolltop/scrollTop";
-import Navigation from "../components/Navigation/Navigation";
-import Footer from "../components/footer/footer";
 import { Client } from "@notionhq/client";
 import Slider from "../components/carousel/carousel";
 import { Actividades } from "../components/actividades/actividades";
@@ -83,7 +80,7 @@ export default function Home({
 
       <div className="App">
         <div>
-          <Footer />
+          
         </div>
       </div>
     </>

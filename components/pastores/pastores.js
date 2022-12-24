@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Link } from "react-router-dom";
 
 function pastores() {
@@ -15,7 +16,7 @@ function pastores() {
         <div className="row g-4">
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div className="team-item position-relative">
-              <img className="img-fluid" src="img/team-1.jpg" alt="" />
+              <Image className="img-fluid" src="img/team-1.jpg" alt="" width={800} height={800}/>
               <Link href="pastores" className="team-text bg-white p-4">
                 <h5>Isaac Martinez</h5>
                 <span>Pastor</span>
@@ -24,7 +25,7 @@ function pastores() {
           </div>
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div className="team-item position-relative">
-              <img className="img-fluid" src="img/team-2.jpg" alt="" />
+              <Image className="img-fluid" src="img/team-2.jpg" alt="" width={800} height={800}/>
               <Link href="pastores" className="team-text bg-white p-4">
                 <h5>Matt Leigthon</h5>
                 <span>Pastor</span>
@@ -33,7 +34,7 @@ function pastores() {
           </div>
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div className="team-item position-relative">
-              <img className="img-fluid" src="img/team-3.jpg" alt="" />
+              <Image className="img-fluid" src="img/team-3.jpg" alt="" width={800} height={800}/>
               <Link href="pastores" className="team-text bg-white p-4">
                 <h5>Jose Vazquez</h5>
                 <span>Pastor</span>

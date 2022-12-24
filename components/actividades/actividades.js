@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Actividades({ data }) {
@@ -20,10 +21,11 @@ export function Actividades({ data }) {
                 data-wow-delay="0.c1s"
               >
                 <div className="service-item bg-light overflow-hidden h-100">
-                  <img
+                  <Image
                     className="img-fluid"
                     src={actividad.properties.imagen.files[0].file.url}
                     alt={actividad.properties.titulo.title[0].plain_text}
+                    width={800} height={800}
                   />
                   <Link
                     href={actividad.properties.link.url}

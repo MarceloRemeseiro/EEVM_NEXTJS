@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function TarjetaFotoDerecha({ data }) {
   return (
     <div className="container-xxl py-5">
@@ -21,10 +23,11 @@ function TarjetaFotoDerecha({ data }) {
               className="Tarjeta-1 position-relative overflow-hidden w-100"
               /* style="min-height: 400px" */
             >
-              <img
+              <Image
                 className="position-absolute w-100 h-100"
                 src={data[0].properties.imagen.files[0].file.url}
                 alt=""
+                width={800} height={800}
                 /* style="object-fit: cover" */
               />
             </div>
