@@ -1,4 +1,4 @@
-import logo from "../../public/img/logo.png";
+import logo from "./logo.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -22,10 +22,10 @@ function footer() {
             </div>
             <div className="col-lg-3 col-md-6">
               <h4 className="text-light mb-4">Dirección</h4>
-              <address>
+              <p>
                 <i className="fa fa-map-marker-alt me-3"></i> <address>C/ de lAngel, 8 -
                 08340 Vilassar de Mar , Barcelona</address> 
-              </address>
+              </p>
               <p>
                 <i className="fa fa-phone-alt me-3"></i>+34 777 555 444
               </p>

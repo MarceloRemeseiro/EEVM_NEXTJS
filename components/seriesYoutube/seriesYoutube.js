@@ -1,6 +1,7 @@
-
+/* eslint-disable react/jsx-no-duplicate-props */
+import { Datos } from "../API/Datos";
+import { Dominio } from "../API/Datos";
 import Spinner from "../spinner/spinner";
-import Image from "next/image";
 
 function SeriesYoutube({ data }) {
   return (
@@ -32,11 +33,11 @@ function SeriesYoutube({ data }) {
                   rel="noreferrer"
                 >
                   <div className="">
-                    <Image
+                    <img
                       src={video.properties.imagen.files[0].file.url}
                       alt={video.properties.titulo.title[0].plain_text}
                       className="img-thumbnail rounded"
-                      width={800} height={800}
+                      width="800"
                     />
                   </div>
                 </a>
