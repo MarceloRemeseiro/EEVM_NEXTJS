@@ -8,6 +8,7 @@ const nextConfig = {
       "images.unsplash.com",
       "s3.us-west-2.amazonaws.com",
       "youtube.googleapis.com",
+      "i.ytimg.com",
     ],
   },
   exportPathMap: async function () {
