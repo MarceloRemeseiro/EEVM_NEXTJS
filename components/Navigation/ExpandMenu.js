@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-const ExpandMenu = ({ route }) => {
+const ExpandMenu = ({ route,toggle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const toggleMenu = () => {
@@ -13,10 +13,10 @@ const ExpandMenu = ({ route }) => {
       <MenuButton onClick={toggleMenu}>
         {route.name} {isMenuOpen ? "*" : "-"}
       </MenuButton>
-      <SubRoutesContainer isOpen={isMenuOpen}>
+      <SubRoutesContainer isOpen={isMenuOpen} >
         {route.subRoutes.map((subRoute) => (
           <SubRoute
-            onClick={toggleMenu}
+           onClick={toggle}
             href={subRoute.link}
             key={subRoute.name}
           >

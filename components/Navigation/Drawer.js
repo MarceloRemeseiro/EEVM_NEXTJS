@@ -17,7 +17,7 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
           <NavRoutes>
             {routes.map((route) => {
               if (route.subRoutes) {
-                return <ExpandMenu route={route} key={route.name} />;
+                return <ExpandMenu route={route} key={route.name} toggle={toggleDrawer}/>;
               }
               return (
                 <NavRoute

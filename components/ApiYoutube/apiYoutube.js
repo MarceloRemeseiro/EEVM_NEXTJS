@@ -1,17 +1,19 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Image from "next/image";
 
 export function Videos() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCIC3BBTqJLN8axplZm2gXog&maxResults=7&order=date&key=AIzaSyDFkaQ0hLqA8nAyaNrZGt_u6VniFSsF6fw`
 
   useEffect(() => {
     setLoading(true);
     axios
       .get(
-        "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCIC3BBTqJLN8axplZm2gXog&maxResults=7&order=date&key=AIzaSyDFkaQ0hLqA8nAyaNrZGt_u6VniFSsF6fw"
+        url
       )
       .then((response) => {
         setData(response.data);
@@ -54,11 +56,12 @@ const ApiYoutube = () => {
           target="_blank "
           rel="noreferrer"
         >
-          <img
+          <Image
             src={data?.items[0].snippet.thumbnails.high.url}
             className="img-thumbnail rounded mb-2"
-            width="1000"
-            alt=""
+            alt="mini"
+            width={800}
+            height={800}
           />
         </Link>
         <p>{data?.items[0].snippet.description.slice(0, 94)}</p>
@@ -76,11 +79,12 @@ const ApiYoutube = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img
+                <Image
                   src={video.snippet.thumbnails.high.url}
                   className="img-thumbnail rounded"
-                  width="800"
-                  alt=""
+                  alt="mini"
+                  width={800}
+                  height={800}
                 />
               </Link>
               <p>{video.snippet.description.slice(0, 94)}</p>
@@ -93,4 +97,3 @@ const ApiYoutube = () => {
 };
 
 export default ApiYoutube;
-
