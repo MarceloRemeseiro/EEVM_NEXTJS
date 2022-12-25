@@ -3,16 +3,14 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const Menu = ({ route }) => {
-  if (!route) {
-    return null;
-  }
+ 
   return (
     <SMenu>
       <MenuButton>{route.name}</MenuButton>
       <SubRoutesContainer>
         {route.subRoutes.map((subRoute) => (
           <SubRoute href={subRoute.link} key={subRoute.name}>
-            {subRoute.name}
+            {subRoute.name} 
           </SubRoute>
         ))}
       </SubRoutesContainer>

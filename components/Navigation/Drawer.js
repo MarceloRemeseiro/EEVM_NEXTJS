@@ -3,15 +3,25 @@ import Link from "next/link";
 import styled from "styled-components";
 import ExpandMenu from "./ExpandMenu";
 import logo from "./logo.png";
+import { useState ,useEffect} from "react";
 
-const Drawer = ({ isOpen, toggleDrawer, routes }) => {
-  if (!routes) {
-    return null;
-  }
+const Drawer = ({ isOpen , toggleDrawer, routes }) => {
+   // Inicializamos isOpen con un valor por defecto
+   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+   // Actualizamos el valor de isDrawerOpen cuando se recibe a través de las props
+   useEffect(() => {
+     setIsDrawerOpen(isOpen);
+   }, [isOpen]);
+ 
+   if (!routes) {
+     return null;
+   }
+
   return (
     <>
       {isOpen && <Backdrop onClick={toggleDrawer} />}
-      <SDrawer isOpen={isOpen}>
+      <SDrawer isOpen={isDrawerOpen}>
         <RightNav>
           <Img src={logo} alt="" />
           <NavRoutes>
@@ -66,12 +76,13 @@ const SDrawer = styled.div`
   height: 100vh;
   width: 100%;
   background-color: rgb(248, 249, 250);
-  transition: 0.3s ease;
+  transition: ${(props) => (props.isOpen ? "0.3s ease" : "none")};
   -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.75);
   transform: translateX(${(props) => (props.isOpen ? "0" : "-110%")});
 `;
+
 
 const RightNav = styled.div`
   display: flex;
@@ -86,6 +97,7 @@ const NavRoute = styled(Link)`
   color: black;
   font-size: 4vw;
   padding: 0.5rem;
+  
 `;
 
 const LoginButton = styled.button`
@@ -97,7 +109,7 @@ const LoginButton = styled.button`
   transition: 0.3s ease;
   color: rgb(248, 249, 250);
   font-size: 5vw;
-  &:hover {
+    &:hover {
     transition: 0.3s ease;
     border: 1px solid transparent;
     background-color: #21b2a5;

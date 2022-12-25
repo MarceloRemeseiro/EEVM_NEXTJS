@@ -20,8 +20,8 @@ function pastores() {
               <div className="Tarjeta-1 position-relative overflow-hidden ">
                 <Image
                   className="position-absolute w-100 h-500"
-                  src="img/team-1.jpg"
-                  alt="" width={800} height={800}
+                  src="/img/team-1.jpg"
+                  alt="" width={500} height={600}
                 />
               </div>
             </div>
@@ -62,8 +62,8 @@ function pastores() {
               <div className="Tarjeta-1 position-relative overflow-hidden ">
                 <Image
                   className="position-absolute w-100 h-500"
-                  src="img/team-2.jpg"
-                  alt="" width={800} height={800}
+                  src="/img/team-2.jpg"
+                  alt="" width={500} height={600}
                 />
               </div>
             </div>
@@ -104,8 +104,8 @@ function pastores() {
               <div className="Tarjeta-1 position-relative overflow-hidden">
                 <Image
                   className="position-absolute w-100 h-500"
-                  src="img/team-3.jpg"
-                  alt="" width={800} height={800}
+                  src="/img/team-3.jpg"
+                  alt="" width={200} height={600}
                 />
               </div>
             </div>

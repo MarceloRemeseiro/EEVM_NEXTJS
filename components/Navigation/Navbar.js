@@ -5,8 +5,6 @@ import Menu from "./Menu";
 import logo from "./logo.png";
 
 const Navbar = ({ toggleDrawer, routes }) => {
-  if (!routes) return null;
-
   return (
     <SNavbar>
       <NavContainer>
