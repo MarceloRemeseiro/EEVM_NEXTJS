@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import Menu from "./Menu";
 import logo from "./logo.png";
 
 const Navbar = ({ toggleDrawer, routes }) => {
+  const [isStylesLoaded, setIsStylesLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsStylesLoaded(!!document.styleSheets.length);
+  }, []);
+
+  if (!isStylesLoaded) {
+    return <p>Cargando estilos...</p>;
+  }
+
   return (
     <SNavbar>
       <NavContainer>
@@ -39,6 +49,7 @@ const Navbar = ({ toggleDrawer, routes }) => {
         </Link>
       </NavContainer>
     </SNavbar>
+      
   );
 };
 

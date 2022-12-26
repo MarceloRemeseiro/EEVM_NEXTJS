@@ -6,17 +6,24 @@ import logo from "./logo.png";
 import { useState ,useEffect} from "react";
 
 const Drawer = ({ isOpen , toggleDrawer, routes }) => {
-   // Inicializamos isOpen con un valor por defecto
-   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  // Inicializamos isOpen con un valor por defecto
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  
+  // Verificamos si hay al menos una hoja de estilos cargada en la página
+  useEffect(() => {
+    if (!document.styleSheets.length) {
+      <p>Cargando</p>;
+    }
+  }, []);
+  // Actualizamos el valor de isDrawerOpen cuando se recibe a través de las props
+  useEffect(() => {
+    setIsDrawerOpen(isOpen);
+  }, [isOpen]);
 
-   // Actualizamos el valor de isDrawerOpen cuando se recibe a través de las props
-   useEffect(() => {
-     setIsDrawerOpen(isOpen);
-   }, [isOpen]);
- 
-   if (!routes) {
-     return null;
-   }
+  if (!routes) {
+    return null;
+  }
+
 
   return (
     <>
@@ -52,6 +59,7 @@ const Drawer = ({ isOpen , toggleDrawer, routes }) => {
 };
 
 export default Drawer;
+
 
 const Img = styled.img`
   width: 70px;

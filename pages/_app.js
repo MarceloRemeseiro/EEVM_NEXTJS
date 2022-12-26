@@ -4,7 +4,6 @@ import "../styles/bootstrap.min.css";
 import "../styles/animate/animate.min.css";
 import "../styles/style.css";
 import Footer from "../components/footer/footer";
-import Navbar from "../components/navbar/Navbar";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -15,6 +14,7 @@ function MyApp({ Component, pageProps }) {
         <Navigation/>
       </div>
       <Component {...pageProps} />;
+      <Footer/>
     </>
   );
 }

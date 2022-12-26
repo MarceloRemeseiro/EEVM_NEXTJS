@@ -9,6 +9,9 @@ import Testimonios from "../components/testimonios/testimonios";
 import Banner from "../components/banner/banner";
 import { HomeCarousel } from "../components/carousel/HomeCarousel";
 
+
+
+
 export async function getServerSideProps() {
   const notion = new Client({
     auth: process.env.NOTION_API_KEY,

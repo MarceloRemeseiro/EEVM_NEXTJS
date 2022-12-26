@@ -10,7 +10,7 @@ const Menu = ({ route }) => {
       <SubRoutesContainer>
         {route.subRoutes.map((subRoute) => (
           <SubRoute href={subRoute.link} key={subRoute.name}>
-            {subRoute.name} 
+            {subRoute.name}
           </SubRoute>
         ))}
       </SubRoutesContainer>
