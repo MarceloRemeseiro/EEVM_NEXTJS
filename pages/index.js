@@ -43,6 +43,9 @@ export async function getServerSideProps() {
   const data5 = await notion.databases.query({
     database_id: "f32c52badf9048838edd377294de9f7a",
   });
+  const data6 = await notion.databases.query({
+    database_id: "3791df837a5b4d07b78409950c1349d7",
+  });
 
   return {
     props: {
@@ -51,6 +54,7 @@ export async function getServerSideProps() {
       dataHomeSlider: data3.results,
       dataTarjetaDerecha: data4.results,
       dataTarjetaIzquierda: data5.results,
+      dataTestimonios: data6.results
     },
   };
 }
@@ -61,6 +65,7 @@ export default function Home({
   dataHomeSlider,
   dataTarjetaDerecha,
   dataTarjetaIzquierda,
+  dataTestimonios
 }) {
   return (
     <>
@@ -79,7 +84,7 @@ export default function Home({
       <Actividades data={dataActividades} />
       <TarjetaFotoIzquierda data={dataTarjetaIzquierda} />
       <HomeCarousel data={dataHomeSlider} />
-      <Testimonios />
+      <Testimonios data={dataTestimonios}/>
 
       <div className="App">
         <div>

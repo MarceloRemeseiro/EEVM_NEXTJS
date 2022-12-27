@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-function Testimonios() {
+
+function Testimonios({data}) {
   return (
     <div className="container-xxl py-5">
       <div className="container">
@@ -11,20 +12,31 @@ function Testimonios() {
               <h1 className="display-6 mb-0">Dios hace grandes cosas!</h1>
             </div>
             <p className="mb-4">
-              Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
-              ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
-              dolore erat amet <br />
+              Dios hace grandes cosas. Esta es una verdad que se encuentra en
+              toda la Biblia y es algo que podemos experimentar en nuestras
+              propias vidas. Muchas veces, cuando enfrentamos problemas o
+              desafíos, es fácil sentirnos abrumados y sin esperanza. Pero Dios
+              es el Dios de la restauración y el milagro. Él puede tomar lo que
+              parece imposible y hacerlo posible.
               <br />
-              Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
-              ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
-              dolore erat amet <br /> <br />
-              Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
-              ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
-              dolore erat amet Diam dolor diam ipsum sit. Aliqu diam amet diam
-              et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita
-              duo justo magna dolore erat amet Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-              lorem sit clita duo justo magna dolore erat amet
+              <br />
+              Una vez, Jesús estaba en la orilla del mar cuando vio a una
+              multitud que lo seguía. Él sintió compasión por ellos y comenzó a
+              enseñarles. Luego, al final del día, le preguntó a sus discípulos
+              cómo iban a alimentar a tanta gente. Aunque ellos no tenían
+              suficiente dinero para comprar alimento, Jesús les dijo que
+              trajeran lo que tenían. Así que le entregaron cinco panes y dos
+              peces. Jesús oró, partió el pan y los peces y los entregó a los
+              discípulos para que los repartieran entre la multitud. Y así lo
+              hicieron, y todos comieron y quedaron satisfechos. Lo que había
+              parecido imposible, Dios lo hizo posible y multiplicó el pan y los
+              peces para saciar a toda la gente.
+              <br /> <br />
+              Este es sólo un ejemplo de cómo Dios hace grandes cosas. Si
+              estamos dispuestos a poner nuestra confianza en Él y seguir sus
+              planes, Él puede hacer cosas increíbles en nuestras vidas. Así que
+              no te rindas, no pierdas la esperanza. Dios está contigo y puede
+              hacer cosas maravillosas si le dejamos tomar el control.
             </p>
           </div>
           <div
@@ -32,48 +44,23 @@ function Testimonios() {
             data-wow-delay="0.5s"
           >
             <div className="scroll " style={{ height: "200px" }}>
-              <div>
-                <h5>Nombre</h5>
-                <span>Profesión</span>
-                <div>
-                  <Image src="/img/testimonial-1.jpg" alt="" width={80} height={80}/>
+              {data?.map((testimonio) => (
+                <div key={testimonio.properties.nombre.title[0].plain_text}>
+                  <h5>{testimonio.properties.nombre.title[0].plain_text}</h5>
+                  <span>{testimonio.properties.profesion.rich_text[0]
+                            .plain_text}</span>
+                  <div>
+                    <Image
+                      src={testimonio.properties.foto.files[0].file.url}
+                      alt=""
+                      width={80}
+                      height={80}
+                    />
+                  </div>
+                  <div>{testimonio.properties.testimonio.rich_text[0]
+                            .plain_text}</div>
                 </div>
-                <div>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
-                  iusto animi, molestiae doloremque expedita perferendis
-                  nesciunt nobis minima nihil nam magni necessitatibus, natus
-                  sapiente. Repellat enim quae minima nisi voluptas?
-                </div>
-              </div>
-              <hr />
-              <div>
-                <h5>Nombre</h5>
-                <span>Profesión</span>
-                <div>
-                  <Image src="/img/testimonial-2.jpg" alt="" width={80} height={80}/>
-                </div>
-                <div>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
-                  iusto animi, molestiae doloremque expedita perferendis
-                  nesciunt nobis minima nihil nam magni necessitatibus, natus
-                  sapiente. Repellat enim quae minima nisi voluptas?
-                </div>
-              </div>
-              <hr />
-              <div>
-                <h5>Nombre</h5>
-                <span>Profesión</span>
-                <div>
-                  <Image src="/img/testimonial-1.jpg" alt="" width={80} height={80}/>
-                </div>
-                <div>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
-                  iusto animi, molestiae doloremque expedita perferendis
-                  nesciunt nobis minima nihil nam magni necessitatibus, natus
-                  sapiente. Repellat enim quae minima nisi voluptas?
-                </div>
-              </div>
-              <hr />
+              ))}
             </div>
           </div>
         </div>

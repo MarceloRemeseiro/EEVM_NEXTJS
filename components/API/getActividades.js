@@ -1,6 +1,6 @@
 import { Client } from "@notionhq/client";
 
-export default function GetActividades(actividad) {
+export default function GetDatos(actividad) {
     return {
       getServerSideProps: async () => {
         const notion = new Client({ auth: process.env.NOTION_API_KEY });
