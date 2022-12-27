@@ -59,7 +59,11 @@ function Testimonios({data}) {
                   </div>
                   <div>{testimonio.properties.testimonio.rich_text[0]
                             .plain_text}</div>
+                            <div>
+                              <hr></hr>
+                            </div>
                 </div>
+              
               ))}
             </div>
           </div>
