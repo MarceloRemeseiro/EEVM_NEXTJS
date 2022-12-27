@@ -8,6 +8,7 @@ import TarjetaFotoDerecha from "../components/tarjetas/tarjetaFotoDerecha";
 import Testimonios from "../components/testimonios/testimonios";
 import Banner from "../components/banner/banner";
 import { HomeCarousel } from "../components/carousel/HomeCarousel";
+import Directo from "../components/directo/directo";
 
 
 
@@ -46,6 +47,9 @@ export async function getServerSideProps() {
   const data6 = await notion.databases.query({
     database_id: "3791df837a5b4d07b78409950c1349d7",
   });
+  const data7 = await notion.databases.query({
+    database_id: "1b1a21cea41745af84ff40a1bbb7c8e7",
+  });
 
   return {
     props: {
@@ -54,7 +58,8 @@ export async function getServerSideProps() {
       dataHomeSlider: data3.results,
       dataTarjetaDerecha: data4.results,
       dataTarjetaIzquierda: data5.results,
-      dataTestimonios: data6.results
+      dataTestimonios: data6.results,
+      dataDirecto: data7.results
     },
   };
 }
@@ -65,7 +70,8 @@ export default function Home({
   dataHomeSlider,
   dataTarjetaDerecha,
   dataTarjetaIzquierda,
-  dataTestimonios
+  dataTestimonios,
+  dataDirecto
 }) {
   return (
     <>
@@ -79,11 +85,14 @@ export default function Home({
         <link href="img/logo.png" rel="icon" />
       </Head>
       <Slider data={dataSlider} />
-      <TarjetaFotoDerecha data={dataTarjetaDerecha} />
+      <Directo data={dataDirecto}/>
+      <br></br>
+      <br></br>
       <Banner />
+      <TarjetaFotoDerecha data={dataTarjetaDerecha} />
       <Actividades data={dataActividades} />
-      <TarjetaFotoIzquierda data={dataTarjetaIzquierda} />
       <HomeCarousel data={dataHomeSlider} />
+      <TarjetaFotoIzquierda data={dataTarjetaIzquierda} />
       <Testimonios data={dataTestimonios}/>
 
       <div className="App">

@@ -4,6 +4,17 @@ import Spinner from "../spinner/spinner";
 import Image from "next/image";
 
 export default function Slider({ data }) {
+  const visible1 =
+    data[0].properties.boton.checkbox === true
+      ? "btn btn-primary btn-smpy-2 px-3 "
+      : "d-none";
+      const visible2 =
+    data[1].properties.boton.checkbox === true
+      ? "btn btn-primary btn-smpy-2 px-3 "
+      : "d-none";
+  const ancho = "1800";
+  const alto = "800";
+
   return (
     <div className="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
       <div
@@ -12,14 +23,13 @@ export default function Slider({ data }) {
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">
-          <div className="carousel-item active">
+          <div className="carousel-item active ">
             <Image
-              className="d-block w-100 altoCarrousel img-fluid"
+              className="d-block  mx-auto altoCarrousel "
               src={data[0].properties.imagen.files[0].file.url}
               alt="ImagenFondo1"
-              width={800}
-              height={800}
-              priority
+              width={ancho}
+              height={alto}
             />
             <div className="carousel-caption">
               <div className="container">
@@ -36,7 +46,7 @@ export default function Slider({ data }) {
                       href={data[0].properties.url.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="btn btn-primary btn-smpy-2 px-3 "
+                      className={"" + visible1 + ""}
                     >
                       Mas detalles
                     </a>
@@ -46,14 +56,13 @@ export default function Slider({ data }) {
             </div>
           </div>
           <div className="carousel-item">
-          <Image
-              className="d-block w-100 altoCarrousel img-fluid"
+            <Image
+              className="d-block altoCarrousel mx-auto"
               src={data[1].properties.imagen.files[0].file.url}
               alt="ImagenFondo1"
-              width={800}
-              height={800}
+              width={ancho}
+              height={alto}
               sizes="fill"
-              priority
             />
             <div className="carousel-caption">
               <div className="container">
@@ -69,7 +78,7 @@ export default function Slider({ data }) {
                       href={data[0].properties.url.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="btn btn-primary btn-smpy-3 px-3"
+                      className={"" + visible2 + ""}
                     >
                       Mas detalles
                     </a>

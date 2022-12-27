@@ -36,7 +36,7 @@ export const routes = [
     link: "/media",
   },
   { 
-    name: "🏕 Temps Junts 🏕", 
+    name: "🏕 TEMPS JUNTS", 
     link: "/tempsjunts" 
   },
   {

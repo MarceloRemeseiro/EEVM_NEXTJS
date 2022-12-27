@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function TarjetaFotoDerecha({ data }) {
   return (
-    <div className="container-xxl py-5">
+    <div className="container-fluid py-5">
       <div className="container">
         <div className="row g-5">
           <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -23,13 +24,15 @@ function TarjetaFotoDerecha({ data }) {
               className="Tarjeta-1 position-relative overflow-hidden w-100"
               /* style="min-height: 400px" */
             >
-              <Image
-                className="position-absolute w-100 h-100"
-                src={data[0].properties.imagen.files[0].file.url}
-                alt=""
-                width={800} height={800}
-                /* style="object-fit: cover" */
-              />
+              <Link href={data[0].properties.link.url}>
+                <Image
+                  className="position-absolute h-100"
+                  src={data[0].properties.imagen.files[0].file.url}
+                  alt=""
+                  width={624}
+                  height={400}
+                />
+              </Link>
             </div>
           </div>
         </div>

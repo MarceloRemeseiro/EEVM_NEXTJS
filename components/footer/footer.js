@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 function Footer() {
+  const direccion = "C/ de l'Angel, 8 - 08340 Vilassar de Mar , Barcelona"
   return (
     <footer>
       <div
@@ -23,8 +24,7 @@ function Footer() {
             <div className="col-lg-3 col-md-6">
               <h4 className="text-light mb-4">Dirección</h4>
               <address>
-                <i className="fa fa-map-marker-alt me-3"></i> <address>C/ de lAngel, 8 -
-                08340 Vilassar de Mar , Barcelona</address> 
+                <i className="fa fa-map-marker-alt me-3"></i> <address>{direccion}</address> 
               </address>
               <p>
                 <i className="fa fa-phone-alt me-3"></i>+34 777 555 444
@@ -35,16 +35,16 @@ function Footer() {
             </div>
             <div className="col-lg-3 col-md-6">
               <h4 className="text-light mb-4">Accesos Directos</h4>
-              <Link href="misionVision" className="btn btn-link">
-                Sobre Nosotros
+              <Link href="/pastores" className="btn btn-link">
+                Nuestros Pastores
               </Link>
-              <Link href="contacto" className="btn btn-link">
+              <Link href="/contacto" className="btn btn-link">
                 Contacta
               </Link>
-              <Link href="media" className="btn btn-link">
+              <Link href="/media" className="btn btn-link">
                 Media
               </Link>
-              <Link href="actividades" className="btn btn-link">
+              <Link href="/actividades" className="btn btn-link">
                 Actividades
               </Link>
               <div className="d-flex pt-2">

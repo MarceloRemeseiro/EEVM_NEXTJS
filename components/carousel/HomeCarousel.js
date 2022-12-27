@@ -2,6 +2,10 @@ import Link from "next/link";
 import Spinner from "../spinner/spinner";
 import Image from "next/image";
 
+const ancho="1800"
+const alto ="800"
+              
+
 export function HomeCarousel({ data }) {
   return (
     <div
@@ -16,8 +20,8 @@ export function HomeCarousel({ data }) {
               src={data[0].properties.imagen.files[0].file.url}
               className="d-block w-100 img-fluid"
               alt=""
-              width={800}
-              height={500}
+              width={ancho}
+              height={alto}
             />
           </a>
         </div>
@@ -27,8 +31,8 @@ export function HomeCarousel({ data }) {
               src={data[1].properties.imagen.files[0].file.url}
               className="d-block w-100 img-fluid"
               alt=""
-              width={800}
-              height={500}
+              width={ancho}
+              height={alto}
             />
           </a>
         </div>
@@ -38,8 +42,8 @@ export function HomeCarousel({ data }) {
               src={data[2].properties.imagen.files[0].file.url}
               className="d-block w-100 img-fluid"
               alt=""
-              width={800}
-              height={500}
+              width={ancho}
+              height={alto}
             />
           </a>
         </div>
@@ -49,8 +53,8 @@ export function HomeCarousel({ data }) {
               src={data[3].properties.imagen.files[0].file.url}
               className="d-block w-100 img-fluid"
               alt=""
-              width={800}
-              height={500}
+              width={ancho}
+              height={alto}
               
             />
           </a>

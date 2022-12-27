@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function TarjetaFotoIzquierda({ data }) {
   return (
@@ -7,12 +8,15 @@ function TarjetaFotoIzquierda({ data }) {
         <div className="row g-5">
           <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
             <div className="Tarjeta-1 position-relative overflow-hidden">
-              <Image
-                className="position-absolute w-100 h-100"
-                src={data[0].properties.imagen.files[0].file.url}
-                alt=""
-                width={800} height={800}
-              />
+            <Link href={data[0].properties.link.url}>
+                <Image
+                  className="position-absolute h-100"
+                  src={data[0].properties.imagen.files[0].file.url}
+                  alt=""
+                  width={624}
+                  height={400}
+                />
+              </Link>
             </div>
           </div>
           <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">

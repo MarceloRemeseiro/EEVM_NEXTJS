@@ -4,6 +4,15 @@ import Link from "next/link";
 function Banner() {
   return (
     <div className="container-fluid my-5 p-0">
+      
+      <div className="border-start border-5 border-primary ps-4 m-4">
+              <h6 className="text-body text-uppercase mb-2">
+                Conócenos
+              </h6>
+              <h1 className="display-6 mb-0">
+                Los 4 puntos para conocernos
+              </h1>
+            </div>
       <div className="row g-0">
         <div className="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
           <div className="position-relative">
