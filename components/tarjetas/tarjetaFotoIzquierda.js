@@ -10,7 +10,7 @@ function TarjetaFotoIzquierda({ data }) {
             <div className="Tarjeta-1 position-relative overflow-hidden">
             <Link href={data[0].properties.link.url}>
                 <Image
-                  className="position-absolute h-100"
+                  className="position-absolute img-fluid"
                   src={data[0].properties.imagen.files[0].file.url}
                   alt=""
                   width={624}
