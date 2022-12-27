@@ -35,6 +35,10 @@ export const routes = [
     name: "MEDIA",
     link: "/media",
   },
+  { 
+    name: "🏕 Temps Junts 🏕", 
+    link: "/tempsjunts" 
+  },
   {
     name: "DONAR",
     link: "/donar",

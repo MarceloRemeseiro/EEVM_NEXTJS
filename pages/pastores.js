@@ -21,7 +21,9 @@ function pastores() {
                 <Image
                   className="position-absolute w-100 h-500"
                   src="/img/team-1.jpg"
-                  alt="" width={500} height={600}
+                  alt=""
+                  width={500}
+                  height={600}
                 />
               </div>
             </div>
@@ -32,24 +34,14 @@ function pastores() {
                   <h1 className="display-6 mb-0">Isaac Martinez</h1>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse bibendum velit at felis eleifend, ut consequat
-                  orci pulvinar.
-                </p>
-                <p className="">
-                  Curabitur iaculis tristique metus, porta sagittis lorem
-                  aliquet at. Mauris eu ligula elit. Fusce quis ipsum id neque
-                  semper fermentum a ac metus.
-                </p>
-                <p className="">
-                  Curabitur iaculis tristique metus, porta sagittis lorem
-                  aliquet at. Mauris eu ligula elit. Fusce quis ipsum id neque
-                  semper fermentum a ac metus.
-                </p>
-                <p className="">
-                  Curabitur iaculis tristique metus, porta sagittis lorem
-                  aliquet at. Mauris eu ligula elit. Fusce quis ipsum id neque
-                  semper fermentum a ac metus.
+                  Nació en Barcelona en 1986 y actualmente reside en Vilassar de
+                  Mar. Está casado con Anna desde el año 2014 y tienen 2 hijos,
+                  Mateo y Mia. Es licenciado en Criminología por la Universidad
+                  de Barcelona (UB) y actualmente está finalizando su grado en
+                  Teología en la Facultad IBSTE (Castelldefels). Desde el año
+                  2022 desempeña el oficio de pastor a tiempo completo en la
+                  EEVDM, siendo el encargado principal del ministerio de
+                  enseñanza en la iglesia.
                 </p>
               </div>
             </div>
@@ -63,7 +55,9 @@ function pastores() {
                 <Image
                   className="position-absolute w-100 h-500"
                   src="/img/team-2.jpg"
-                  alt="" width={500} height={600}
+                  alt=""
+                  width={500}
+                  height={600}
                 />
               </div>
             </div>
@@ -71,27 +65,15 @@ function pastores() {
               <div className="h-100">
                 <div className="border-start border-5 border-primary ps-4 mb-5">
                   <h6 className="text-body text-uppercase mb-2">Pastor</h6>
-                  <h1 className="display-6 mb-0">Matt Leigthon</h1>
+                  <h1 className="display-6 mb-0">Matthew Leighton</h1>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse bibendum velit at felis eleifend, ut consequat
-                  orci pulvinar.
-                </p>
-                <p className="">
-                  Curabitur iaculis tristique metus, porta sagittis lorem
-                  aliquet at. Mauris eu ligula elit. Fusce quis ipsum id neque
-                  semper fermentum a ac metus.
-                </p>
-                <p className="">
-                  Curabitur iaculis tristique metus, porta sagittis lorem
-                  aliquet at. Mauris eu ligula elit. Fusce quis ipsum id neque
-                  semper fermentum a ac metus.
-                </p>
-                <p className="">
-                  Curabitur iaculis tristique metus, porta sagittis lorem
-                  aliquet at. Mauris eu ligula elit. Fusce quis ipsum id neque
-                  semper fermentum a ac metus.
+                  Proviene de Colorado (EEUU), y actualmente reside en Cabrils.
+                  Él y su esposa, Núria, tienen cinco hijos. Se licenció en
+                  Westminster Seminary de California, y tiene un doctorado en
+                  teología de la Universidad de Salamanca. Matt es profesor en
+                  la Facultad de Teología IBSTE. Ha sido pastor/anciano en la
+                  EEVDM desde 2005.
                 </p>
               </div>
             </div>
@@ -105,7 +87,9 @@ function pastores() {
                 <Image
                   className="position-absolute w-100 h-500"
                   src="/img/team-3.jpg"
-                  alt="" width={200} height={600}
+                  alt=""
+                  width={200}
+                  height={600}
                 />
               </div>
             </div>
@@ -116,24 +100,15 @@ function pastores() {
                   <h1 className="display-6 mb-0">Jose Vazquez</h1>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse bibendum velit at felis eleifend, ut consequat
-                  orci pulvinar.
-                </p>
-                <p className="">
-                  Curabitur iaculis tristique metus, porta sagittis lorem
-                  aliquet at. Mauris eu ligula elit. Fusce quis ipsum id neque
-                  semper fermentum a ac metus.
-                </p>
-                <p className="">
-                  Curabitur iaculis tristique metus, porta sagittis lorem
-                  aliquet at. Mauris eu ligula elit. Fusce quis ipsum id neque
-                  semper fermentum a ac metus.
-                </p>
-                <p className="">
-                  Curabitur iaculis tristique metus, porta sagittis lorem
-                  aliquet at. Mauris eu ligula elit. Fusce quis ipsum id neque
-                  semper fermentum a ac metus.
+                  Nació en Sevilla y reside en Mataró desde 2011 junto a su
+                  esposa y sus 3 hijos. Es Técnico Superior en Dirección de
+                  Obras y compagina su trabajo como diseñador con el pastorado
+                  de la Iglesia en Vilassar de Mar. Durante años ha trabajado
+                  con jóvenes y ha servido en el ministerio de la predicación.
+                  Una de sus pasiones es la música, editó en 2019 su primer
+                  album "El Dios de ayer" y es uno de los componentes del equipo
+                  de alabanza de la EEVDM. En 2021 comenzó sus estudios de
+                  teología en Southern Baptist Theological Seminary.
                 </p>
               </div>
             </div>
