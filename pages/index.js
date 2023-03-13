@@ -76,7 +76,7 @@ export default function Home({
   return (
     <>
       <Head>
-        <meta charSet="utf-8" />
+        <meta charSet="UTF-8" />
         <title>Església de Vilassar de Mar</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="" name="keywords" />
@@ -95,11 +95,7 @@ export default function Home({
       <TarjetaFotoIzquierda data={dataTarjetaIzquierda} />
       <Testimonios data={dataTestimonios}/>
 
-      <div className="App">
-        <div>
-          
-        </div>
-      </div>
+      
     </>
-  );
+  )
 }

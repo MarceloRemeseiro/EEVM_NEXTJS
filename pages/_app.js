@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
       </div>
       <Component {...pageProps} />;
       <Footer/>
+      
     </>
   );
 }

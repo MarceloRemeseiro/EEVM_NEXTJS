@@ -7,12 +7,13 @@ export function Videos() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  
 
   useEffect(() => {
     setLoading(true);
     axios
       .get(
-        "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCIC3BBTqJLN8axplZm2gXog&maxResults=7&order=date&key=AIzaSyDFkaQ0hLqA8nAyaNrZGt_u6VniFSsF6fw"
+        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCIC3BBTqJLN8axplZm2gXog&maxResults=7&order=date&key=AIzaSyDFkaQ0hLqA8nAyaNrZGt_u6VniFSsF6fw`
       )
       .then((response) => {
         setData(response.data);
@@ -49,7 +50,7 @@ const ApiYoutube = () => {
         </div>
       </div>
       <div className="container text-center">
-        <h3>{data?.items[0].snippet.title}</h3>
+        <h3>{decodeURIComponent(data?.items[0].snippet.title)}</h3>
         <Link
           href={"https://www.youtube.com/watch?v=" + data?.items[0].id.videoId}
           target="_blank "
@@ -58,7 +59,8 @@ const ApiYoutube = () => {
           <Image
             src={data?.items[0].snippet.thumbnails.high.url}
             className="img-thumbnail rounded mb-2"
-            width={800} height={800}
+            width={800}
+            height={800}
             alt=""
           />
         </Link>
@@ -71,7 +73,9 @@ const ApiYoutube = () => {
         <div className="row">
           {data?.items.slice(1).map((video) => (
             <div key={video.id.videoId} className="col-md-4">
-              <p className="mt-5 fw-bold">{video.snippet.title}</p>
+              <p className="mt-5 fw-bold">
+                {decodeURIComponent(video.snippet.title)}
+              </p>
               <Link
                 href={"https://www.youtube.com/watch?v=" + video.id.videoId}
                 target="_blank"
@@ -80,7 +84,8 @@ const ApiYoutube = () => {
                 <Image
                   src={video.snippet.thumbnails.high.url}
                   className="img-thumbnail rounded"
-                  width={800} height={800}
+                  width={800}
+                  height={800}
                   alt=""
                 />
               </Link>
@@ -94,4 +99,3 @@ const ApiYoutube = () => {
 };
 
 export default ApiYoutube;
-
