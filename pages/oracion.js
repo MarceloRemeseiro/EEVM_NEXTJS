@@ -1,7 +1,7 @@
 import "react-notion/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
 import { NotionRenderer } from "react-notion";
-import GetPaginas from "../components/API/getPaginas";
+import GetPaginas from "./api/getPaginas";
 
 export const getServerSideProps = GetPaginas("dc43799cf5a0460881d73cb41bc2f2bf").getServerSideProps;
 

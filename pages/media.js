@@ -1,4 +1,4 @@
-import ApiYoutube from "../components/ApiYoutube/apiYoutube";
+import ApiYoutube from "./api/apiYoutube";
 import SeriesYoutube from "../components/seriesYoutube/seriesYoutube";
 import { Client } from "@notionhq/client";
 

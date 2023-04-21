@@ -1,5 +1,5 @@
 import Image from "next/image";
-import GetDatos from "../components/API/getActividades";
+import GetDatos from "./api/getActividades";
 
 export const getServerSideProps = GetDatos("e7806c8e356f4449bb2a0a9260f9508b").getServerSideProps;
 

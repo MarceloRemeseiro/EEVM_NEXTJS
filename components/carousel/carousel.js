@@ -1,35 +1,41 @@
 import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Spinner from "../spinner/spinner";
 import Image from "next/image";
 
 export default function Slider({ data }) {
+  const [loading, setLoading] = useState(true);
+
   const visible1 =
     data[0].properties.boton.checkbox === true
       ? "btn btn-primary btn-smpy-2 px-3 "
       : "d-none";
-      const visible2 =
+  const visible2 =
     data[1].properties.boton.checkbox === true
       ? "btn btn-primary btn-smpy-2 px-3 "
       : "d-none";
-  const ancho = "1800";
-  const alto = "800";
 
   return (
     <div className="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
       <div
         id="carouselExampleControlsNoTouching"
-        className="carousel slide"
+        className="carousel slide position-relative" // Añade la clase position-relative aquí
         data-bs-ride="carousel"
       >
+        {loading && <Spinner />}
+
+        {/* Rest of the carousel code */}
         <div className="carousel-inner">
           <div className="carousel-item active ">
-            <Image
+            <img
               className="d-block  mx-auto altoCarrousel "
               src={data[0].properties.imagen.files[0].file.url}
               alt="ImagenFondo1"
-              width={ancho}
-              height={alto}
+              width="100%"
+              height="auto"
+              sizes="fill"
+              onLoad={() => setLoading(false)}
             />
             <div className="carousel-caption">
               <div className="container">
@@ -56,13 +62,14 @@ export default function Slider({ data }) {
             </div>
           </div>
           <div className="carousel-item">
-            <Image
+            <img
               className="d-block altoCarrousel mx-auto"
               src={data[1].properties.imagen.files[0].file.url}
               alt="ImagenFondo1"
-              width={ancho}
-              height={alto}
+              width="100%"
+              height="auto"
               sizes="fill"
+              onLoad={() => setLoading(false)}
             />
             <div className="carousel-caption">
               <div className="container">

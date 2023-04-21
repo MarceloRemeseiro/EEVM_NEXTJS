@@ -81,7 +81,6 @@ export default function Home({
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="" name="keywords" />
         <meta content="" name="description" />
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <link href="img/logo.png" rel="icon" />
       </Head>
       <Slider data={dataSlider} />

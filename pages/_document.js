@@ -1,8 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
-
-
-
 
 
 export default function Document() {
@@ -15,7 +11,7 @@ export default function Document() {
           rel="stylesheet"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com"  />
 
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
@@ -43,7 +39,7 @@ export default function Document() {
         <script src="lib/easing/easing.min.js" async />
         <script src="lib/waypoints/waypoints.min.js" async />
         <script src="lib/owlcarousel/owl.carousel.min.js" async />
-        <script src="js/main.js" async />
+        {/* <script src="js/main.js" async /> */}
       </body>
     </Html>
   );

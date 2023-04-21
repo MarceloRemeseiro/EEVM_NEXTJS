@@ -4,28 +4,6 @@ import emailjs from "@emailjs/browser";
 import Image from "next/image";
 
 const Contacto = () => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_9d2axns",
-        "template_z87wv5i",
-        form.current,
-        "Gxhk5bb9zZGNRRsZb"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Tu mensaje ha sido enviado!");
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
   return (
     <div>
       <div
@@ -44,7 +22,13 @@ const Contacto = () => {
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
               <div className="row g-4 align-items-center">
                 <div className="col-sm-6">
-                  <Image className="img-fluid" src="/img/team-1.jpg" alt="" width={800} height={800} />
+                  <Image
+                    className="img-fluid"
+                    src="/img/team-1.jpg"
+                    alt=""
+                    width={800}
+                    height={800}
+                  />
                 </div>
                 <div className="col-sm-6">
                   <h3 className="mb-0">Isaac Martinez</h3>
@@ -61,7 +45,13 @@ const Contacto = () => {
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
               <div className="row g-4 align-items-center">
                 <div className="col-sm-6">
-                  <Image className="img-fluid" src="/img/team-2.jpg" alt="" width={800} height={800} />
+                  <Image
+                    className="img-fluid"
+                    src="/img/team-2.jpg"
+                    alt=""
+                    width={800}
+                    height={800}
+                  />
                 </div>
                 <div className="col-sm-6">
                   <h3 className="mb-0">Mat Leigthon</h3>
@@ -104,65 +94,6 @@ const Contacto = () => {
                 felis arcu euismod libero, nec suscipit libero enim dapibus
                 purus.
               </p>
-              <form ref={form} onSubmit={sendEmail}>
-                <div className="row g-3">
-                  <div className="col-md-6">
-                    <div className="form-floating">
-                      <input
-                        type="text"
-                        className="form-control border-0 bg-light"
-                        id="name"
-                        placeholder="Your Name"
-                        name="user_name"
-                      />
-                      <label for="name">Nombre</label>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-floating">
-                      <input
-                        type="email"
-                        className="form-control border-0 bg-light"
-                        id="email"
-                        placeholder="Your Email"
-                        name="user_email"
-                      />
-                      <label for="email">Email</label>
-                    </div>
-                  </div>
-                  {/* <div className="col-12">
-                    <div className="form-floating">
-                      <input
-                        type="text"
-                        className="form-control border-0 bg-light"
-                        id="subject"
-                        placeholder="Subject"
-                      />
-                      <label for="subject">Asunto</label>
-                    </div>
-                  </div> */}
-                  <div className="col-12">
-                    <div className="form-floating">
-                      <textarea
-                        className="form-control border-0 bg-light h-150"
-                        placeholder="Leave a message here"
-                        id="message"
-                        name="message"
-                      ></textarea>
-                      <label for="message">Mensaje</label>
-                    </div>
-                  </div>
-                  <div className="col-12">
-                    <button
-                      className="btn btn-primary py-3 px-5"
-                      type="submit"
-                      value="Send"
-                    >
-                      Enviar
-                    </button>
-                  </div>
-                </div>
-              </form>
             </div>
           </div>
         </div>
